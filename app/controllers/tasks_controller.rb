@@ -19,6 +19,7 @@ class TasksController < ApplicationController
     else
       flash.now[:danger] = "タスクが投稿されませんでした"
       render :new
+    end
     
   end
   
@@ -50,3 +51,5 @@ class TasksController < ApplicationController
     params.require(:task).permit(:content)
   end
 end
+  
+
